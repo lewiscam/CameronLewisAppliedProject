@@ -1,0 +1,16 @@
+.menu {
+    list-style: none;
+    margin-bottom: 2em;
+    background-color: #efefef;
+    padding: 25px;
+    margin-top: 0;
+    text-align: center;
+    li {
+        display: inline;
+        padding: 15px;
+    }
+    li a {
+        text-decoration: none;
+        font-size: 1.5rem;
+    }
+}
