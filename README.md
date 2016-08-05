@@ -10,3 +10,4 @@ View project proposal PowerPoing presentation [here](https://drive.google.com/fi
 2. Add more basic styles throughout the site pending Usability and Color Metrology courses this fall
 3. Add more use of color to assess color contrast requirements
 4. Explore adding more content types to increase coverage (i.e. image gallery, accordion, progress bar)
+5. Add questions for survery
