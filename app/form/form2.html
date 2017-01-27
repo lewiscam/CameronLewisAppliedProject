@@ -1,2 +1,80 @@
-<p>Form Partial - Accessible</p>
-<span>{{templateUrl}}</span>
+<section class="accessible text">
+  <h1>Form</h1>
+  <p>None of the information you provide here will be submitted or saved.</p>
+
+  <form action="">
+    <fieldset>
+      <label class="top-label" for='name'>Name</label>
+      <input type="text" class="accessible-input" id="name" placeholder="Type Name Here" />
+      </br>
+      <label class="top-label" for='phoneNumber'>Phone Number</label>
+      <input type="text" class="accessible-input" id="phoneNumber" placeholder="xxx-xxx-xxxx" />
+      <br>
+      <label class="top-label" for="birthday">Birthday</label>
+      <input id="birthday" class="accessible-input" type="date">
+    </fieldset>
+
+    <fieldset>
+      <legend class="top-label">Favorite pizza topping</legend>
+      <input type="radio" name='pizza' value="Cheese" id="cheese" />
+      <label for="cheese">Cheese</label>
+      </br>
+      <input type="radio" name='pizza' value="Pepperoni" id="pepperoni" />
+      <label for="pepperoni">Pepperoni</label>
+      </br>
+      <input type="radio" name='pizza' value="Mushrooms" id="mushrooms" />
+      <label for="mushrooms">Mushrooms</label>
+      </br>
+      <input type="radio" name='pizza' value="Anchovies" id="anchovies" />
+      <label for='anchovies'>Anchovies</label>
+      </br>
+      <input type="radio" name='pizza' value="Other" id="other" />
+      <label for='other'>Other</label>
+      </br>
+    </fieldset>
+
+    <fieldset>
+      <legend class="top-label">Favorite hamburger toppings (pick three)</legend>
+      <input type="checkbox" name='hamburger' value="Cheese" id="cheese" />
+      <label for='cheese'>Cheese</label>
+      </br>
+      <input type="checkbox" name='hamburger' value="Ketchup" id="ketchup" />
+      <label for='ketchup'>Ketchup</label>
+      </br>
+      <input type="checkbox" name='hamburger' value="Mustard" id="mustard" />
+      <label for='mustard'>Mustard</label>
+      </br>
+      <input type="checkbox" name='hamburger' value="Pickles" id="pickles" />
+      <label for='pickles'>Pickles</label>
+      </br>
+      <input type="checkbox" name='hamburger' value="Onions" id='onions' />
+      <label for="onions">Onions</label>
+      </br>
+      <input type="checkbox" name='hamburger' value="Lettuce" id="lettuce" />
+      <label for="lettuce">Lettuce</label>
+      </br>
+      <input type="checkbox" name='hamburger' value="Tomato" id="tomato" />
+      <label for='tomato'>Tomato</label>
+      </br>
+    </fieldset>
+
+    <fieldset>
+      <legend class="top-label">What is your favorite cuisine?</legend>
+      <select class="accessible-input">
+      <option value="American">American</option>
+      <option value="Mexican">Mexican</option>
+      <option value="Chinese">Chinese</option>
+      <option value="Thai">Thai</option>
+      <option value="Italian">Italian</option>
+      <option value="French">French</option>
+      <option value="Indian">Indian</option>
+      <option value="Other">Other</option>
+    </select>
+    </fieldset>
+    <p>None of your selections will be saved.  This form is purely for testing</p>
+    <input ng-click='submitForm()' class="accessible-button" type="submit" name="submit" value="Submit">
+  </form>
+</section>
+<div class="accessible text survey-code-container">
+<span>Go back to the survey and use this code for the first question of this section on the survey: <strong class="survey-code">{{code}}</strong></span>
+<div>

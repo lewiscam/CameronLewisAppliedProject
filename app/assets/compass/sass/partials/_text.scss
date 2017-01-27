@@ -1,0 +1,104 @@
+.inaccessible.text {
+  // make inaccessible contrast ratio for text
+  color: #999999;
+  //use thin font to decrease readability and use fixed font sizes
+  h1, h2, h3, h4, h5, h6 {
+    font-weight: 100;
+    line-height: 100%;
+    margin: 10px 0;
+  }
+  h1 {
+    font-size: 30px;
+  }
+  h2 {
+    font-size: 24px;
+  }
+  h3 {
+    font-size: 20px;
+  }
+  h4 {
+    font-size: 18px;
+  }
+  h5 {
+    font-size: 16px;
+  }
+  h6 {
+    font-size: 14px;
+  }
+  p, ul, ol, a {
+    font-size: 12px;
+    font-weight: 100;
+    line-height: 100%;
+  }
+  ul {
+    list-style-type: none;
+  }
+  a {
+    color: #0079bc;
+    text-decoration: none;
+  }
+}
+
+.accessible.text {
+  h1, h2, h3, h4, h5, h6 {
+    margin: 1rem 0 0.75rem 0;
+    font-weight: 600;
+    line-height: 150%;
+  }
+  h1 {
+    font-size: 2rem;
+  }
+  h2 {
+    font-size: 1.75rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1.125rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 150%;
+  }
+  strong {
+    font-weight: 600;
+  }
+  li {
+      line-height: 150%;
+    }
+  a {
+    color: #0079bc;
+    text-decoration: underline;
+    line-height: 150%;
+    &:hover, &:focus {
+      cursor: pointer;
+      color: darken(#0079bc, 20%);
+    }
+  }
+  .emphasis {
+    font-style: italic;
+  }
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fontSizeChanger {
+  text-align: center;
+}
+
+  .font-size-button {
+    color: #0079bc;
+    cursor: pointer;
+    margin: 0 0.25rem;
+    font-size: 1.5rem;
+    line-height: 150%;
+  }

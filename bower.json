@@ -1,15 +1,13 @@
 {
-  "name": "angular-seed",
-  "description": "A starter project for AngularJS",
+  "name": "cameronlewisappliedproject",
+  "description": "Applied Project at Arizona State University for Cameron Lewis",
   "version": "0.0.0",
-  "homepage": "https://github.com/angular/angular-seed",
+  "homepage": "https://github.com/angular/cameronlewisappliedproject",
   "license": "MIT",
   "private": true,
   "dependencies": {
     "angular": "~1.4.0",
     "angular-route": "~1.4.0",
-    "angular-loader": "~1.4.0",
-    "angular-mocks": "~1.4.0",
-    "html5-boilerplate": "~5.2.0"
+    "angular-loader": "~1.4.0"
   }
 }

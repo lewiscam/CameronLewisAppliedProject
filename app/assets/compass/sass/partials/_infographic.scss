@@ -1,0 +1,10 @@
+.infographic {
+  width: 50%;
+}
+
+.accessible.infographic {
+  max-width: 600px;
+  .infographic {
+    width: 100%;
+  }
+}

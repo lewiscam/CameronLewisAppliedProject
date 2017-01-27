@@ -1,0 +1,84 @@
+@import '../modules/typography';
+
+.top-label {
+  display: block;
+  margin: 1rem 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+fieldset {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  border: none;
+  @include font-roboto();
+}
+
+label {
+  @include font-roboto();
+}
+
+.accessible-button {
+  @include font-roboto();
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+
+  &:hover, &:focus {
+    background-color: #666666;
+  }
+}
+
+span.accessible-input {
+   width: 15rem;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: solid 1px #0079bc;
+  color: #333333;
+}
+
+input.accessible-input {
+  @include font-roboto();
+  width: 15rem;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: solid 1px #aaaaaa;
+  color: #333333;
+
+  &[type=text] {
+    display:block;
+  }
+
+  &:hover, &:focus {
+    border-color: darken(#aaaaaa, 25%);
+  }
+}
+
+select.accessible-input {
+    height: 2rem;
+    width: 10rem;
+    font-size: 1rem;
+}
+
+.inaccessible {
+  .top-label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+  input {
+    &[type=text] {
+      background: transparent;
+    padding: 10px;
+    border: none;
+    border-bottom: solid 1px #aaaaaa;
+    width: 200px;
+    }
+
+    &:focus, &:hover {
+      outline: none;
+    }
+  }
+}

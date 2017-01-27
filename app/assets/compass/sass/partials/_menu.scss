@@ -1,0 +1,33 @@
+@import '../modules/typography';
+
+.menu {
+  list-style: none;
+    margin-bottom: 2em;
+    background-color: #333333;
+    padding: 25px;
+    margin-top: 0;
+    text-align: center;
+    @include font-roboto();
+
+    & > li {
+      display: inline;
+      padding: 15px;
+      
+      a {
+        text-decoration: none;
+        font-size: 1.25rem;
+        color: #ffffff;
+        }
+    }
+}
+
+@media only screen and (max-width: 640px) {
+  .menu {
+      padding: 10px;
+
+      & > li {
+        padding: 10px;
+        line-height: 150%;
+      }
+  }
+}

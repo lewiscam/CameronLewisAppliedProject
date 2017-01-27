@@ -1,31 +1,396 @@
-/* line 1, ../compass/sass/partials/_mainNavigation.scss */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.accessible audio {
+  width: 100%;
+}
+
+.top-label {
+  display: block;
+  margin: 1rem 0 0.25rem;
+  font-size: 1.25rem;
+}
+
+fieldset {
+  margin: 0 0 2rem 0;
+  padding: 0;
+  border: none;
+  font-family: 'Roboto', sans-serif;
+}
+
+label {
+  font-family: 'Roboto', sans-serif;
+}
+
+.accessible-button {
+  font-family: 'Roboto', sans-serif;
+  padding: 0.5rem 1rem;
+  text-align: center;
+  background-color: #000000;
+  color: #ffffff;
+  border: none;
+}
+.accessible-button:hover, .accessible-button:focus {
+  background-color: #666666;
+}
+
+span.accessible-input {
+  width: 15rem;
+  border: none;
+  padding: 0.5rem;
+  border-bottom: solid 1px #0079bc;
+  color: #333333;
+}
+
+input.accessible-input {
+  font-family: 'Roboto', sans-serif;
+  width: 15rem;
+  border: none;
+  padding: 0.75rem;
+  font-size: 1rem;
+  border: solid 1px #aaaaaa;
+  color: #333333;
+}
+input.accessible-input[type=text] {
+  display: block;
+}
+input.accessible-input:hover, input.accessible-input:focus {
+  border-color: #6a6a6a;
+}
+
+select.accessible-input {
+  height: 2rem;
+  width: 10rem;
+  font-size: 1rem;
+}
+
+.inaccessible .top-label {
+  display: block;
+  margin: 10px 0;
+  font-size: 16px;
+}
+.inaccessible input[type=text] {
+  background: transparent;
+  padding: 10px;
+  border: none;
+  border-bottom: solid 1px #aaaaaa;
+  width: 200px;
+}
+.inaccessible input:focus, .inaccessible input:hover {
+  outline: none;
+}
+
+.accessible img {
+  width: 100%;
+}
+
+.inaccessible img {
+  width: 300px;
+}
+
+@media only screen and (max-width: 480px) {
+  .inaccessible img {
+    width: 100%;
+  }
+}
+.infographic {
+  width: 50%;
+}
+
+.accessible.infographic {
+  max-width: 600px;
+}
+.accessible.infographic .infographic {
+  width: 100%;
+}
+
 .menu {
   list-style: none;
   margin-bottom: 2em;
-  background-color: #efefef;
+  background-color: #333333;
   padding: 25px;
   margin-top: 0;
   text-align: center;
+  font-family: 'Roboto', sans-serif;
 }
-/* line 8, ../compass/sass/partials/_mainNavigation.scss */
-.menu li {
+.menu > li {
   display: inline;
   padding: 15px;
 }
-/* line 12, ../compass/sass/partials/_mainNavigation.scss */
-.menu li a {
+.menu > li a {
   text-decoration: none;
+  font-size: 1.25rem;
+  color: #ffffff;
+}
+
+@media only screen and (max-width: 640px) {
+  .menu {
+    padding: 10px;
+  }
+  .menu > li {
+    padding: 10px;
+    line-height: 150%;
+  }
+}
+table thead th {
+  padding: 0.5rem 1rem;
+  border-bottom: 1px solid #d3d3d3;
+}
+table td {
+  padding: 0.5rem 1rem;
+}
+
+.accessible.table, .inaccessible.table {
+  overflow-x: scroll;
+}
+
+.accessible-table th {
+  font-family: 'Roboto', sans-serif;
+  text-align: left;
+  background-color: #efefef;
+  font-weight: 700;
+}
+.accessible-table td {
+  font-family: 'Roboto', sans-serif;
+}
+.accessible-table tbody tr:nth-child(odd) {
+  background-color: rgba(0, 121, 188, 0.1);
+}
+.accessible-table caption {
+  font-size: 1.25rem;
+  line-height: 150%;
+  margin-bottom: 1rem;
+}
+
+.inaccessible.text {
+  color: #999999;
+}
+.inaccessible.text h1, .inaccessible.text h2, .inaccessible.text h3, .inaccessible.text h4, .inaccessible.text h5, .inaccessible.text h6 {
+  font-weight: 100;
+  line-height: 100%;
+  margin: 10px 0;
+}
+.inaccessible.text h1 {
+  font-size: 30px;
+}
+.inaccessible.text h2 {
+  font-size: 24px;
+}
+.inaccessible.text h3 {
+  font-size: 20px;
+}
+.inaccessible.text h4 {
+  font-size: 18px;
+}
+.inaccessible.text h5 {
+  font-size: 16px;
+}
+.inaccessible.text h6 {
+  font-size: 14px;
+}
+.inaccessible.text p, .inaccessible.text ul, .inaccessible.text ol, .inaccessible.text a {
+  font-size: 12px;
+  font-weight: 100;
+  line-height: 100%;
+}
+.inaccessible.text ul {
+  list-style-type: none;
+}
+.inaccessible.text a {
+  color: #0079bc;
+  text-decoration: none;
+}
+
+.accessible.text h1, .accessible.text h2, .accessible.text h3, .accessible.text h4, .accessible.text h5, .accessible.text h6 {
+  margin: 1rem 0 0.75rem 0;
+  font-weight: 600;
+  line-height: 150%;
+}
+.accessible.text h1 {
+  font-size: 2rem;
+}
+.accessible.text h2 {
+  font-size: 1.75rem;
+}
+.accessible.text h3 {
   font-size: 1.5rem;
 }
-
-/* line 3, ../compass/sass/style.scss */
-main.main-content {
-  padding: 0 25px 50px 25px;
-  margin: 0 100px;
+.accessible.text h4 {
+  font-size: 1.25rem;
+}
+.accessible.text h5 {
+  font-size: 1.125rem;
+}
+.accessible.text h6 {
+  font-size: 1rem;
+}
+.accessible.text p {
+  font-size: 1rem;
+  line-height: 150%;
+}
+.accessible.text strong {
+  font-weight: 600;
+}
+.accessible.text li {
+  line-height: 150%;
+}
+.accessible.text a {
+  color: #0079bc;
+  text-decoration: underline;
+  line-height: 150%;
+}
+.accessible.text a:hover, .accessible.text a:focus {
+  cursor: pointer;
+  color: #003756;
+}
+.accessible.text .emphasis {
+  font-style: italic;
 }
 
-/* line 8, ../compass/sass/style.scss */
+.uppercase {
+  text-transform: uppercase;
+}
+
+.fontSizeChanger {
+  text-align: center;
+}
+
+.font-size-button {
+  color: #0079bc;
+  cursor: pointer;
+  margin: 0 0.25rem;
+  font-size: 1.5rem;
+  line-height: 150%;
+}
+
+.accessible video {
+  width: 100%;
+}
+
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+
+.accessible {
+  font-family: 'Roboto', sans-serif;
+  width: 480px;
+  margin: 0 auto;
+}
+.accessible.table {
+  width: 90%;
+}
+
+.inaccessible {
+  font-family: 'Roboto Condensed', sans-serif;
+  outline: none;
+  width: 768px;
+  margin: 0 auto;
+}
+
+.hidden, .skipLink {
+  position: absolute;
+  left: -10000px;
+  top: auto;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+}
+
+.skipLink:focus {
+  position: relative;
+  left: 0;
+  width: auto;
+  height: auto;
+}
+
+section {
+  background-color: #ffffff;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.19), 0 6px 6px rgba(0, 0, 0, 0.23);
+}
+section a {
+  display: block;
+}
+
+.survey-code-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.survey-code {
+  font-size: 1.75rem;
+}
+
+main.main-content {
+  padding: 0 25px 50px 25px;
+  margin: 0 auto;
+}
+
 footer.footer-content {
   width: 400px;
   margin: 0 auto;
+}
+
+@media only screen and (max-width: 960px) {
+  .inaccessible {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .accessible {
+    width: 80%;
+  }
+}
+@media only screen and (max-width: 480px) {
+  .accessible, .inaccessible {
+    width: 70%;
+  }
 }

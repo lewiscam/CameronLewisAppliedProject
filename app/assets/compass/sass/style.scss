@@ -1,11 +1,91 @@
 @import 'partials/all';
+@import 'modules/typography';
+
+body {
+  margin: 0;
+  background-color: #efefef;
+}
+
+.accessible {
+  @include font-roboto();
+  // cut lines off well before 80 chars
+  width: 480px;
+  margin: 0 auto;
+
+  &.table {
+    width: 90%;
+  }
+}
+
+.inaccessible {
+  @include font-roboto-condensed();
+  outline: none;
+  width: 768px;
+  margin: 0 auto;
+}
+
+.hidden {
+  position:absolute;
+  left:-10000px;
+  top:auto;
+  width:1px;
+  height:1px;
+  overflow:hidden;
+  }
+
+  .skipLink {
+    @extend .hidden;
+    &:focus {
+      position: relative;
+      left: 0;
+      width: auto;
+      height: auto;
+    }
+  }
+
+section {
+  background-color: #ffffff;
+  padding: 1.5rem 3rem;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+
+  a {
+    display: block;
+  }
+}
+
+.survey-code-container {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+.survey-code {
+  font-size: 1.75rem;
+}
 
 main.main-content {
-    padding: 0 25px 50px 25px;
-    margin: 0 100px;
+  padding: 0 25px 50px 25px;
+  margin: 0 auto;
 }
 
 footer.footer-content {
-    width: 400px;
-    margin: 0 auto;
+  width: 400px;
+  margin: 0 auto;
+}
+
+@media only screen and (max-width: 960px) {
+  .inaccessible {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .accessible {
+    width: 80%;
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .accessible, .inaccessible {
+    width: 70%;
+  }
 }

@@ -1,19 +1,27 @@
 'use strict';
 
-angular.module('myApp.text', ['ngRoute'])
-
-.config(['$routeProvider', function($routeProvider) {
-  $routeProvider.when('/text', {
-    templateUrl: 'text/text' + randomIntFromInterval(1,2) + '.html',
-    controller: 'TextCtrl'
-  });
-}])
+angular.module('myApp.text', [])
 
 .controller('TextCtrl', ['$scope', '$route', '$rootScope', function($scope, $route, $rootScope) {
   $scope.templateUrl = $route.current.loadedTemplateUrl;
-  var accessible = $scope.templateUrl == 'text/text2.html' ? true : false;
+  $scope.code = $scope.templateUrl == 'text/text2.html' ? 'TEXT2' : 'TEXT1';
+    
+  $scope.fontSize = 1;
+
+  $scope.increaseFontSize = function () {
+    changeFontSize(1.25);
+  };
+
+  $scope.decreaseFontSize = function () {
+    changeFontSize(0.75);
+  };
   
-  //instantiation of $rootScope.views must happen on first page visit
-  $rootScope.views = {};
-  $rootScope.views.text = {"Accessible": accessible};
+  var changeFontSize = function (fontSize) {
+
+    $('.accessible.text').find('article, h1, h2, h3, h4, h5, h6, p, ul, ol, a, span').each(function(i, e) {
+      var currentSize = parseFloat($(e).css('font-size')) / 16;
+      $(e).css('font-size', currentSize * fontSize + 'rem');
+    });
+  };
+
 }]);
